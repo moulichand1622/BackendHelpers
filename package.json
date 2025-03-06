@@ -1,0 +1,28 @@
+{
+  "name": "storiesrusbackend",
+  "version": "1.0.0",
+  "description": "use premium flag to true in task for generating images with dalle. # LangGraph x GPT Researcher [LangGraph](https://python.langchain.com/docs/langgraph) is a library for building stateful, multi-actor applications with LLMs.  This example uses Langgraph to automate the process of an in depth research on any given topic.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fal-ai/client": "^1.2.3",
+    "@fal-ai/serverless-client": "^0.15.0",
+    "@langchain/anthropic": "^0.2.4",
+    "@langchain/langgraph": "^0.0.28",
+    "axios": "^1.8.1",
+    "base-64": "^1.0.0",
+    "canvas": "^2.11.2",
+    "express": "^4.19.2",
+    "fal": "^0.1.1",
+    "js-yaml": "^4.1.0",
+    "json": "^11.0.0",
+    "openai": "^4.52.7",
+    "request": "^2.88.2",
+    "winston": "^3.13.1"
+  }
+}
