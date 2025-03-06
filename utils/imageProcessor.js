@@ -5,7 +5,7 @@ import axios from "axios";
 import {createFileObject,downloadImage} from "./fileUtils.js"
 // Configure Fal AI client
 fal.config({
-  credentials: "381608e7-fd15-4270-9706-f1870fe50f89:30aaf8bf18344fb5bd41197849d8a82b"
+  credentials: ""
 });
 
 /**
