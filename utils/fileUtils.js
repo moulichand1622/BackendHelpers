@@ -17,3 +17,32 @@ export async function downloadImage(imageUrl, outputPath) {
         console.error("Error downloading image:", error.message);
     }
 }
+export async function downloadAudio(audioUrl, outputPath) {
+    if (!audioUrl || !audioUrl.startsWith("http")) {
+        console.error("Invalid audio URL:", audioUrl);
+        return;
+    }
+
+    try {
+        console.log("Downloading audio from:", audioUrl);
+        const response = await axios({
+            url: audioUrl,
+            method: "GET",
+            responseType: "stream",
+        });
+
+        const writer = fs.createWriteStream(outputPath);
+        response.data.pipe(writer);
+
+        return new Promise((resolve, reject) => {
+            writer.on("finish", () => {
+                console.log("Audio file saved at:", outputPath);
+                resolve();
+            });
+            writer.on("error", reject);
+        });
+
+    } catch (error) {
+        console.error("Error downloading audio:", error.message);
+    }
+}
